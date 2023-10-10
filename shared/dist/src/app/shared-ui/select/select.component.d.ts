@@ -1,0 +1,30 @@
+import { EventEmitter, OnInit } from '@angular/core';
+import { ControlValueAccessor } from '@angular/forms';
+import * as i0 from "@angular/core";
+export declare class SelectComponent implements OnInit, ControlValueAccessor {
+    list: any[];
+    bindLabel: string;
+    className: string;
+    selectClassName: string;
+    placeHolder: string;
+    value: any;
+    label: string;
+    disabled: boolean;
+    multi: boolean;
+    required: boolean;
+    searchable: boolean;
+    clearable: boolean;
+    selectedValue: EventEmitter<any>;
+    constructor();
+    writeValue(value: any): void;
+    registerOnChange(fn: any): void;
+    registerOnTouched(fn: any): void;
+    setDisabledState(isDisabled: boolean): void;
+    onTouched: () => any;
+    propagateChange: (_: any) => void;
+    ngOnInit(): void;
+    setValue(): void;
+    onSelectedValueChange(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SelectComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectComponent, "app-select", never, { "list": { "alias": "list"; "required": false; }; "bindLabel": { "alias": "bindLabel"; "required": false; }; "className": { "alias": "className"; "required": false; }; "selectClassName": { "alias": "selectClassName"; "required": false; }; "placeHolder": { "alias": "placeHolder"; "required": false; }; "value": { "alias": "value"; "required": false; }; "label": { "alias": "label"; "required": false; }; "disabled": { "alias": "disabled"; "required": false; }; "multi": { "alias": "multi"; "required": false; }; "required": { "alias": "required"; "required": false; }; "searchable": { "alias": "searchable"; "required": false; }; "clearable": { "alias": "clearable"; "required": false; }; }, { "selectedValue": "selectedValue"; }, never, never, false, never>;
+}
