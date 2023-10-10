@@ -1,0 +1,12 @@
+<form [formGroup]="inputForm">
+  <div [ngClass]="className">
+    <input [ngClass]="inputClassName" formControlName="text" [attr.placeholder]="placeHolder" type="text"
+           [(ngModel)]="value" (blur)="onBlurEvent()" (focus)="onFocusEvent()">
+    <div>
+      <small *ngIf="textsubmit && f.text.errors" class="text-danger">
+        <span *ngIf="f.text.errors.required">{{ requierdMessage }}</span>
+        <span *ngIf="f.text.errors.pattern">{{ patternMessage }}</span>
+      </small>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,16 @@
+<div [ngClass]="className">
+    <ng-select
+            [items]="list"
+            [bindLabel]="bindLabel"
+            [placeholder]="placeHolder"
+            [ngClass]="selectClassName"
+            [multiple]="multi"
+            [required]="required"
+            [(ngModel)]="value"
+            [disabled]="disabled"
+            [clearable]="clearable"
+            [searchable]="searchable"
+            (ngModelChange)="onSelectedValueChange()"
+    ></ng-select>
+</div>
+

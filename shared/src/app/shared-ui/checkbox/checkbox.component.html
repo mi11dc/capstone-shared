@@ -1,0 +1,21 @@
+<div class="row">
+  <ng-container *ngFor="let item of data; index as i">
+    <div [ngClass]="item.className">
+      <input
+        type="checkbox" checked *ngIf="isChecked(item.label)"
+        [ngClass]="item.inputClassName" (click)="onCheckClick(item.label)"
+        [disabled]="disabled" [required]="required"
+      >
+      <input
+        type="checkbox" *ngIf="!isChecked(item.label)"
+        [ngClass]="item.inputClassName" (click)="onCheckClick(item.label)"
+        [disabled]="disabled" [required]="required"
+      >
+      <app-form-label
+        class="mx-1"
+        [errorClass]="'form-check-label'"
+        [errorMessage]="item.label"
+      ></app-form-label>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,25 @@
+<div [ngClass]="class" class="col-xs-12 col-12 col-md-4 form-group">
+  <input *ngIf="!dateRange"
+         type="text"
+         [attr.placeholder]="placeholder"
+         [ngClass]="inputClassName"
+         bsDatepicker
+         [bsConfig]="bsConfig"
+         [(ngModel)]="value"
+         [isDisabled]="disabled"
+         style="border: 1px solid darkgray; background-color: #ffffff; cursor: auto;" readonly
+         (ngModelChange)="onDateChange()"
+  >
+
+  <input *ngIf="dateRange"
+         type="text"
+         [attr.placeholder]="placeholder"
+         [ngClass]="inputClassName"
+         bsDaterangepicker
+         [bsConfig]="bsConfig"
+         [(ngModel)]="value"
+         [isDisabled]="disabled"
+         style="border: 1px solid darkgray; background-color: #ffffff; cursor: auto;" readonly
+         (ngModelChange)="onDateChange()"
+  >
+</div>
